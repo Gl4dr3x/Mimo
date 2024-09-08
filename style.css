@@ -1,5 +1,7 @@
 img {
   border-radius: 75px;
+  animation: bounce 2s infinite;
+  margin-top: 20px;
 }
 
 h2 {
@@ -7,7 +9,7 @@ h2 {
 }
 
 body {
-  background-color: slateblue;
+  background: linear-gradient(to right, black, darkmagenta);
   font-family: 'Trebuchet MS';
   color: white;
   text-align: center;
@@ -21,5 +23,28 @@ a {
   display: block;
   text-align: center;
   margin: 10px;
-  color: slateblue;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+a:hover {
+  color: white;
+  background-color: gold;
+  transform: scale(1.05)
+}
+
+@keyframes bounce {
+  40% {
+transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateY(0);
+  }
+
 }
